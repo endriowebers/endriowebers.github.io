@@ -1,11 +1,33 @@
 ---
-title: "endriowebers.github.io"
+title: "Endrio Webers" # if using a built-in template, this title appears under your photo
+image: profile.jpg # great spot for your professional headshot :) 
+toc: false # remove "On this page" table of contents
+about: 
+  template: trestles # see other templates at https://quarto.org/docs/websites/website-about.html#templates
+  image-shape: round
+  image-width: 20em
+  links:
+    - icon: linkedin # you'll need to the fontawesome extension to include icons: https://github.com/quarto-ext/fontawesome
+      text: LinkedIn
+      href: https://www.linkedin.com/in/endriowebers/
+    - icon: github
+      text: GitHub
+      href: https://github.com/endriowebers
+    - icon: envelope
+      text: Email
+      href: mailto::endriowebers@gmail.com
 ---
 
-This is a Quarto website.
+## Bem vindo!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Eu sou Endrio Webers pesquisador na área de controle biológico de doença de plantas, vinculado ao Laboratório de Controle de Biológico do departamento de fitopatologia da Universidade Federal de Viçosa. 
 
-```{r}
-1 + 1
-```
+## Education
+
+**Mestre em Fitopatologia** | UFV, 2023
+
+**Engenheiro Agrônomo** | UERGS, 2021
+
+**Tecnico em Agropecuária** | UFSM, 2015
+
+
