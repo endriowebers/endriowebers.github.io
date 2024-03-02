@@ -1,5 +1,6 @@
 ---
 title: "Endrio Webers" # if using a built-in template, this title appears under your photo
+subtitle: "endriowebers@gmail.com"
 image: profile.jpg # great spot for your professional headshot :) 
 toc: false # remove "On this page" table of contents
 about: 
@@ -22,7 +23,7 @@ about:
 
 Eu sou Endrio Webers pesquisador na área de controle biológico de doença de plantas, vinculado ao Laboratório de Controle de Biológico do departamento de fitopatologia da Universidade Federal de Viçosa. 
 
-## Education
+## Formação
 
 **Mestre em Fitopatologia** | UFV, 2023
 

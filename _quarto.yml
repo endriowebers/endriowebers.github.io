@@ -5,10 +5,10 @@ website:
   title: "endriowebers.github.io"
   navbar:
     title: "Endrio Webers" # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
-    left: # align navbar items to the right/left/center
-      - href: index.qmd
-        text: Home # use 'text' option to update the name as you want it to appear in your navbar
+    right:  # align navbar items to the right/left/center
       - about.qmd
+      - href: projects.qmd
+        text: Projetos
       - icon: github # add icons that link to social media, etc.
         href: https://github.com/endriowebers
 
