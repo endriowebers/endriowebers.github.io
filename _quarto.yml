@@ -9,6 +9,8 @@ website:
       - about.qmd
       - href: projects.qmd
         text: Projetos
+      - href: formacao.qmd
+        text: Formação
       - icon: github # add icons that link to social media, etc.
         href: https://github.com/endriowebers
 
