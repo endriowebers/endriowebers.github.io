@@ -16,13 +16,19 @@ about:
       text: GitHub
       href: https://github.com/endriowebers
     - icon: envelope
-      text: Email
+      text: e-mail
       href: mailto::endriowebers@gmail.com
+    - icon: google
+      text: Scholar 
+      href: https://scholar.google.com.br/citations?user=7R4pqeEAAAAJ&hl=pt-BR&oi=ao 
+    - icon: file-text
+      text: Lattes
+      href: http://lattes.cnpq.br/9258482506177833
 ---
 
 
 
-Engenheiro Agrônomo | Fitopatologista | Pesquisador | Controle Biológico 
+Engenheiro Agrônomo | Fitopatologista | Pesquisador | Controle Biológico |
 Analise de dados | Planejamento e condução de experimentos | Soja | Grão-de-bico
 
 
