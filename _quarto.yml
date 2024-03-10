@@ -6,11 +6,14 @@ website:
   navbar:
     title: "Endrio Webers" # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
     right:  # align navbar items to the right/left/center
-      - about.qmd
+      - href: about.qmd
+        text: Sobre
       - href: projects.qmd
         text: Projetos
       - href: formacao.qmd
         text: Formação
+      - href: habilidades.qmd
+        text: Habilidades
       - icon: github # add icons that link to social media, etc.
         href: https://github.com/endriowebers
 

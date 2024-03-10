@@ -33,5 +33,12 @@
     "title": "FA icon & Mermaid in Quarto Revealjs",
     "section": "First Slide",
     "text": "First Slide\n\n\n\n\nflowchart LR\n    D(fa:fa-phone)--&gt;C[fa:fa-house]\n\n\n\n\n\n\n\n\n\nflowchart LR\n    D(fa:fa-phone)--&gt;C[fa:fa-earth-americas]\n\n\n\n\n\nEu sou Endrio Webers, pesquisador na área de controle biológico de doenças de plantas, vinculado ao Laboratório de Controle Biológico do Departamento de Fitopatologia da Universidade Federal de Viçosa.\nDesculpe pela bagunça, site em contrução"
+  },
+  {
+    "objectID": "habilidades.html",
+    "href": "habilidades.html",
+    "title": "Habilidades",
+    "section": "",
+    "text": "Teste de eficiência de fungicidas “in vitro”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeste de eficiência de fungicidas em Casa de vegetação:\n\n\n\n\n\n\n\n\n\n\n\n\nExperimentos a campo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnalises moleculares\n\n\n\n\n\n\n\n\n\n\n\n\nCultivo de microorganismos\n\n\n\nUso de  na analise de dados, aplicações e sites"
   }
 ]
