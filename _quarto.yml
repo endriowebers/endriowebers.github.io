@@ -3,3 +3,39 @@ project:
   resources: 
   - shinylive-sw.js
 
+website:
+  title: "endriowebers.github.io"
+  navbar:
+    title: "Endrio Webers" # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
+    right:  # align navbar items to the right/left/center
+      - href: about.qmd
+        text: Sobre
+      - href: projects.qmd
+        text: Projetos
+      - href: formacao.qmd
+        text: Formação
+      - href: habilidades.qmd
+        text: Habilidades
+      - text: Aplicação  # Main menu title
+        menu: 
+        - text: pag1    # Submenu item 1 - text
+          href: App2.qmd  # Submenu item 1 - link
+        - text: pag2    # Submenu item 2 within pag1 - text
+          href: testeapp.qmd  # Submenu item 2 within pag1 - link
+      - icon: github # add icons that link to social media, etc.
+        href: https://github.com/endriowebers
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - estilo_ERW.scss
+
+
+page-footer:
+    background: light # or dark
+    left:
+      - "Copyright 2024, Endrio Webers"
+    right:
+      - icon: github
+        href: https://github.com/endriowebers

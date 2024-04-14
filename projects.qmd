@@ -1,0 +1,29 @@
+---
+title: "Projetos: "
+---
+
+##### *Clonostachys* e Grão-de-bico, amigos ou inimigos?
+
+*Clonostachys* é um gênero de fungos conhecido pelo micoparasitismo, sendo utilizado como agente biológico de controle de doenças de planta. Recentemente, fungos das espécies *C. rhizophaga* e *C. chloroleuca* foram relatados como agentes etiológicos do amarelecimento, podridão de colo e raiz na cultura do grão-de-bico (Plant Disease. 93, 666, 2009; New Dis. Rep. 46, 12123, 2022). No Brasil, nenhuma espécie de *Clonostachys* foi registrada como agente causal de doença em grão-de-bico e nenhuma outra espécie vegetal. Dessa forma, este projeto tem por objetivo elucidar o "status" da interação de *Clonostachys* a grão-de-bico.
+
+
+
+
+
+
+![](media/projetos/grao.png){fig-align="center" width=70%} 
+
+
+
+
+##### Atividade antifúngica e controle da antracnose da soja por produtos concentrados com lipopeptídeos de *Bacillus* spp.
+
+O controle de doenças por *Bacillus* spp., em grande parte, é explicado pela produção de metabólitos bioativos, principalmente os lipopeptídeos (LPPs). Os LPPs são sintetizados como metabólitos secundários pela bactéria, e são divididos em três grupos principais, surfactinas, fengicinas e iturinas de acordo com a estrutura dos peptídeos cíclicos. São moléculas anfifílicas com atividade surfactante e capazes de interagir com a estrutura das membranas celulares, formando poros que resultam no extravasamento e morte celular, este processo é tido como o principal mecanismo envolvido no controle de doenças de plantas por *Bacillus* spp.. 
+Desta forma, produtos a base de Bacillus spp. se tornam um alternativa interessante para o manejo da antracnose nas lavouras de soja como um biofungicida multissítio, desde que isolados capazes de produzir LPPs sejam selecionados e posteriormente concentrados para gerar um produto rico nessas substâncias bioativas com alta eficiência no controle de doenças. Assim, esse projeto busca avaliar diferentes espécies e isolados de *Bacillus* spp. no controle da antracnose da soja.
+
+
+
+
+
+![](media/projetos/lpps.jpg){fig-align="center" width=70%} 
+

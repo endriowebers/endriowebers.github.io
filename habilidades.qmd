@@ -1,0 +1,81 @@
+---
+title: "Habilidades"
+---
+
+
+#### Teste de eficiência de fungicidas "in vitro" 
+
+::: {layout="[[52,48.5], [100]]"}
+
+![](media/habilidades/in_vitro.jpg)
+
+![](media/habilidades/in_vitro_2.jpg){width=90%} 
+
+![](media/habilidades/in_vitro_3.jpg)
+
+:::
+
+
+#### Teste de eficiência de fungicidas em Casa de vegetação:
+
+
+::: {layout-ncol=2}
+
+![](media/habilidades/veg_1.jpg){width=100%} 
+
+
+![](media/habilidades/veg_2.webp){width=75%} 
+:::
+
+
+#### Experimentos a campo
+
+::: {layout-ncol=3}
+
+![](media/habilidades/campo_1.jpg){width=80%} 
+
+![](media/habilidades/campo_2.jpg){width=80%} 
+
+![](media/habilidades/campo_3.jpg){width=80%} 
+
+![](media/habilidades/campo_4.webp){width=60%}
+
+![](media/habilidades/campo_5.jpg){width=80%} 
+
+![](media/habilidades/campo_6.jpg){width=80%}
+
+:::
+
+
+
+#### Analises moleculares
+
+::: {layout-ncol=2}
+
+![](media/habilidades/molecular_1.jpeg){width=100%} 
+
+![](media/habilidades/molecular_2.jpeg){width=80%} 
+
+:::
+
+
+
+
+#### Cultivo de microorganismos
+
+![](media/habilidades/bio_1.jpg){width=50%} 
+
+
+
+
+#### Uso de {{< fa brands r-project >}} na analise de dados, aplicações e sites
+
+::: {layout-ncol=2}
+
+![](media/habilidades/analise.jpg){width=100%} 
+
+![](media/habilidades/analise_2.jpg){width=60%}
+
+![](media/habilidades/aplicacao.jpg){width=200%} 
+
+:::
