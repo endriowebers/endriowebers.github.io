@@ -1,0 +1,106 @@
+---
+title: "Calibração de Inóculo"
+format:
+  html:
+    grid: 
+      body-width: 1400px
+    resources: 
+      - shinylive-sw.js
+filters:
+  - shinylive
+---
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 500
+
+library(shiny)
+library(dplyr)
+
+# Função inoculo modificada
+inoculo <- function(numero, quadrante, conc, volume) {
+  if (!is.numeric(numero) || !is.numeric(conc) || !is.numeric(volume)) {
+    stop("Os argumentos numero, conc e volume devem ser numéricos.")
+  }
+  fator_correcao <- case_when(
+    quadrante == "A" ~ 10000,
+    quadrante == "a" ~ 160000,
+    quadrante == "b" ~ 200000,
+    quadrante == "c" ~ 250000,
+    quadrante == "c'" ~ 4000000,
+    TRUE ~ 1  # Caso nenhum dos casos acima seja verdadeiro
+  )
+  
+  esporo_mL <- numero * fator_correcao
+  
+  volume_inoculo <- (conc * volume) / esporo_mL
+  volume_veiculo <- volume - volume_inoculo
+  
+  return(list(esporo_mL = esporo_mL, volume_inoculo = volume_inoculo, volume_veiculo = volume_veiculo))
+}
+
+# Define UI for application 
+ui <- navbarPage(theme = bslib::bs_theme(bootswatch = "lumen"),
+                 tabPanel("Calibração de Inóculo",
+                                     sidebarLayout(
+                                       sidebarPanel(
+                                         numericInput("numero", "Número de esporos contados:", 0, min = 1, max = 999999999999),
+                                         radioButtons("quadrante", "Quadrante:",
+                                                      c("A" = "A",
+                                                        "a" = "a",
+                                                        "b" = "b",
+                                                        "c" = "c",
+                                                        "c'" = "c'")),
+                                         numericInput("volume", "Volume final desejado (mL):", 0, min = 0, max = 999999999999999999),
+                                         radioButtons("conc", "Concentração desejada:",
+                                                      c("10²" = 100,
+                                                        "10³" = 1000,
+                                                        "10⁴" = 10000,
+                                                        "10⁵" = 100000,
+                                                        "10⁶" = 1000000,
+                                                        "10⁷" = 10000000,
+                                                        "10⁸" = 100000000,
+                                                        "10⁹ "= 1000000000,
+                                                        "10¹⁰"= 10000000000))
+                                       ),
+                                       mainPanel(
+                                         verbatimTextOutput("resultado"),
+                                         style = "text-align: center;", 
+                                           h2("Determinação e Calibração da Concentração de Inóculo Fungico"),
+                                           p("Via suspenção de esporos utilizando Hemacitômetro"),
+                                           p("A new p() command starts a new paragraph. Supply a style attribute to change the format of the entire paragraph.", style = "font-family: 'times'; font-size: 16pt;"),
+                                           strong("strong() makes text bold."),
+                                           em("em() creates italicized (i.e., emphasized) text."),
+                                           br(),
+                                           code("code displays your text similar to computer code."),
+                                           div("div creates segments of text with a similar style. This division of text is all blue because I passed the argument 'style = color:blue' to div", style = "color:blue;"),
+                                           br(),
+                                           p("span does the same thing as div, but it works with ",
+                                             span("groups of words", style = "color:blue;"),
+                                             " that appear inside a paragraph."
+                                           ),
+                                           img(src = "picture.jpg", height = 300, width = 300)
+                                         )
+                                     )
+                 )
+)
+
+
+# Define server logic
+server <- function(input, output, session) {
+  output$resultado <- renderText({
+    resultado <- inoculo(input$numero, input$quadrante, as.numeric(input$conc), input$volume)
+    paste("Esporos por mL:", format(resultado$esporo_mL, scientific = TRUE), "\n",
+          "Volume para Inóculo:", resultado$volume_inoculo, "\n",
+          "Volume de Veículo:", resultado$volume_veiculo)
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+```
+
+
+
+
+
