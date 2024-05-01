@@ -3,20 +3,23 @@ title: "Habilidades"
 ---
 
 
-#### Teste de eficiência de fungicidas "in vitro" {.test}
+#### Teste de eficiência de fungicidas "in vitro" 
 
-::: {layout="[[52,48.5], []]"}
-
+::: {layout="[[52,48.5],[100,180]]"}
 ![](media/habilidades/in_vitro.jpg)
 
-![](media/habilidades/in_vitro_2.jpg){width=90%} 
+![](media/habilidades/in_vitro_2.jpg)
 
-![](media/habilidades/in_vitro_3.jpg){width=30%}
+![](media/habilidades/in_vitro_3.jpg)
+
+
+![](media/habilidades/in_vitro_4.jpg) 
+
 
 :::
 
 
-#### Teste de eficiência de fungicidas em Casa de vegetação: {.test}
+#### Teste de eficiência de fungicidas em Casa de vegetação:
 
 
 ::: {layout-ncol=2}
@@ -28,7 +31,7 @@ title: "Habilidades"
 :::
 
 
-#### Experimentos a campo {.test}
+#### Experimentos a campo
 
 ::: {layout-ncol=3}
 
@@ -48,7 +51,7 @@ title: "Habilidades"
 
 
 
-#### Analises moleculares  {.test}
+#### Analises moleculares
 
 ::: {layout-ncol=2}
 
@@ -60,13 +63,18 @@ title: "Habilidades"
 
 
 
+#### Cultivo de microorganismos
 
-#### Cultivo de microorganismos  {.test}
+
+::: {layout-ncol=2}
+
+
+
 
 ![](media/habilidades/bio_1.jpg){width=50%} 
 
-
-
+![](media/habilidades/bio_2.jpg){width=50%} 
+:::
 
 #### Uso de {{< fa brands r-project >}} na analise de dados, aplicações e sites
 
