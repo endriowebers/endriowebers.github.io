@@ -1,5 +1,4 @@
 ---
-title: "Organizador dos Dados do Leitor de Placas"
 format:
   html:
     grid: 
@@ -9,6 +8,24 @@ format:
 filters:
   - shinylive
 ---
+
+## Organizador dos Dados do Leitor de Placas {.center}
+#### Loccus LMR-96 {.center}
+
+1 - Selecione o arquivo que deseja
+
+2 - Selecione o formato e as linhas e/ou colunas a serem exibidas
+
+3 - altere o número de linhas da tabela a ser exibido em "show"
+
+4 - Selecione a tabela e a copie (Crtl+C)
+
+5 - Cole (Ctrl+V) no seu editor de tabelas de preferência
+
+
+
+
+OBS: A função de exportação de arquivos não está funcionando devido so pacote para contrução dessa modalidade de aplicativo estar em desenvolvimento.
 
 ```{shinylive-r}
 #| standalone: true
@@ -184,8 +201,6 @@ server <- function(input, output) {
 
 # Crie o aplicativo Shiny
 shinyApp(ui = ui, server = server)
-
-
 
 
 

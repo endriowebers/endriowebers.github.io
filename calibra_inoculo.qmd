@@ -9,9 +9,9 @@ filters:
   - shinylive
 ---
 
-#  Determinação e Calibração da Concentração de Inóculo Fungico {.test}
+#  Determinação e Calibração da Concentração de Inóculo Fungico {.center}
 
-###  Via suspenção de esporos utilizando Hemacitômetro {.test}
+###  Via suspenção de esporos utilizando Hemacitômetro {.center}
 
 
 O hemacitômetro comum consiste de uma lâmina retangular em forma de H, onde se encontram duas regiões delimitadas, (figura I) cada região delimitada possui uma superfície de 9 mm² e profundidade de 0,1 mm. Esse compartimento possui 9 divisões/quadrantes, (figura II) que são de três tipos, são eles "A" = "B" = "C", em que:
