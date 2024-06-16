@@ -26,7 +26,7 @@ O hemacitômetro comum consiste de uma lâmina retangular em forma de H, onde se
 
  
 
-Para utilização da aplicação, preencha os campos conforme o indicado e escolha o quadrando que foi realizada a contagem de esporos. Insira o volume final de suspensão de esporos e a" concentração desejada. A aplicação lhe retornara três valores:
+Para utilização da aplicação, preencha os campos conforme o indicado e escolha o quadrante que foi realizada a contagem de esporos. Insira o volume final de suspensão de esporos e a" concentração desejada. A aplicação lhe retornara três valores:
 
 - Esporos por mL da suspenção inicial
 
@@ -71,7 +71,7 @@ ui <- navbarPage(theme = bslib::bs_theme(bootswatch = "lumen"),
                 tabPanel("Calibração de Inóculo",
                          fluidRow(
                            column(width = 6,
-                                  numericInput("numero", "Número médio de esporos contados:", 0, min = 1, max = 999999999999),
+                                  numericInput("numero", "Número MÉDIO de esporos contados:", 0, min = 1, max = 999999999999),
                                   radioButtons("quadrante", "Quadrante:",
                                               c("A" = "A",
                                                 "a" = "a",

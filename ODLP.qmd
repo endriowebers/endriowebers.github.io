@@ -25,7 +25,7 @@ filters:
 
 
 
-OBS: A função de exportação de arquivos não está funcionando devido so pacote para contrução dessa modalidade de aplicativo estar em desenvolvimento.
+OBS: A função de exportação de arquivos não está funcionando devido ao pacote para contrução dessa modalidade de aplicativo estar em desenvolvimento.
 
 ```{shinylive-r}
 #| standalone: true

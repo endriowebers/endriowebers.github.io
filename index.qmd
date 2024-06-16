@@ -24,6 +24,10 @@ about:
     - icon: file-text
       text: Lattes
       href: http://lattes.cnpq.br/9258482506177833
+    - icon: CV 
+      text: CV
+      href: CV.qmd
+  
 ---
 
 

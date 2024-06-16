@@ -1,0 +1,7 @@
+---
+title: "Currículo Endrio Rodrigo Webers"
+---
+
+
+{{< pdf file="pdf/CV1.pdf"  height="500px">}}
+---
