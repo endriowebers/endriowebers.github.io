@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://endriowebers.github.io/ODLP.html</loc>
-    <lastmod>2024-05-01T23:57:26.842Z</lastmod>
+    <loc>https://endriowebers.github.io/formacao.html</loc>
+    <lastmod>2024-06-16T19:07:14.095Z</lastmod>
   </url>
   <url>
-    <loc>https://endriowebers.github.io/about.html</loc>
-    <lastmod>2024-05-01T23:57:27.338Z</lastmod>
+    <loc>https://endriowebers.github.io/CV.html</loc>
+    <lastmod>2024-06-16T19:07:13.599Z</lastmod>
   </url>
   <url>
     <loc>https://endriowebers.github.io/calibra_inoculo.html</loc>
-    <lastmod>2024-05-01T23:57:27.338Z</lastmod>
-  </url>
-  <url>
-    <loc>https://endriowebers.github.io/formacao.html</loc>
-    <lastmod>2024-05-01T23:57:27.338Z</lastmod>
-  </url>
-  <url>
-    <loc>https://endriowebers.github.io/projects.html</loc>
-    <lastmod>2024-05-01T23:57:27.530Z</lastmod>
+    <lastmod>2024-06-16T19:07:14.095Z</lastmod>
   </url>
   <url>
     <loc>https://endriowebers.github.io/habilidades.html</loc>
-    <lastmod>2024-05-01T23:57:27.338Z</lastmod>
+    <lastmod>2024-06-16T19:07:14.095Z</lastmod>
+  </url>
+  <url>
+    <loc>https://endriowebers.github.io/about.html</loc>
+    <lastmod>2024-06-16T19:07:14.095Z</lastmod>
   </url>
   <url>
     <loc>https://endriowebers.github.io/index.html</loc>
-    <lastmod>2024-05-01T23:57:27.338Z</lastmod>
+    <lastmod>2024-06-16T19:07:14.095Z</lastmod>
+  </url>
+  <url>
+    <loc>https://endriowebers.github.io/projects.html</loc>
+    <lastmod>2024-06-16T19:07:14.287Z</lastmod>
+  </url>
+  <url>
+    <loc>https://endriowebers.github.io/ODLP.html</loc>
+    <lastmod>2024-06-16T19:07:13.599Z</lastmod>
   </url>
 </urlset>

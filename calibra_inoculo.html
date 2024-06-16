@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>I: Esquema de um hemacitômetro tipo Neubauer: lâmina retangular em forma de “H”, II compartimentos (A, B, C) e subcompartimentos (a-c) da lâmina (fonte: Alfenas &amp; Mafia, 2016)</figcaption>
 </figure>
 </div>
-<p>Para utilização da aplicação, preencha os campos conforme o indicado e escolha o quadrando que foi realizada a contagem de esporos. Insira o volume final de suspensão de esporos e a” concentração desejada. A aplicação lhe retornara três valores:</p>
+<p>Para utilização da aplicação, preencha os campos conforme o indicado e escolha o quadrante que foi realizada a contagem de esporos. Insira o volume final de suspensão de esporos e a” concentração desejada. A aplicação lhe retornara três valores:</p>
 <ul>
 <li><p>Esporos por mL da suspenção inicial</p></li>
 <li><p>Volume da suspensão inicial para preparo da suspensão de inóculo final em mL”</p></li>
@@ -201,7 +201,7 @@ ui &lt;- navbarPage(theme = bslib::bs_theme(bootswatch = "lumen"),
                 tabPanel("Calibração de Inóculo",
                          fluidRow(
                            column(width = 6,
-                                  numericInput("numero", "Número médio de esporos contados:", 0, min = 1, max = 999999999999),
+                                  numericInput("numero", "Número MÉDIO de esporos contados:", 0, min = 1, max = 999999999999),
                                   radioButtons("quadrante", "Quadrante:",
                                               c("A" = "A",
                                                 "a" = "a",
