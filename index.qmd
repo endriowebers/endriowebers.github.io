@@ -27,8 +27,8 @@ about:
     - icon: CV 
       text: CV
       href: CV.qmd
-    - icon
-      texte: Referências Associação de Fungicidas
+    - icon: file-text
+      text: Referências Associação de Fungicidas
       href: referencias.qmd
   
 ---
