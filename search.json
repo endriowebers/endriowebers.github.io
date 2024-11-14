@@ -1,16 +1,44 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "endriowebers.github.io",
+    "objectID": "habilidades.html",
+    "href": "habilidades.html",
+    "title": "Habilidades",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Teste de eficiência de fungicidas “in vitro”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeste de eficiência de fungicidas em Casa de vegetação\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExperimentos a campo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnálises moleculares\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCultivo de microorganismos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUso de {{&lt; fa brands r-project &gt;}} na analise de dados, aplicações e sites"
+  },
+  {
+    "objectID": "CV.html",
+    "href": "CV.html",
+    "title": "Currículo Endrio Rodrigo Webers",
+    "section": "",
+    "text": "{{&lt; pdf \"pdf/CV1.pdf\" \"500px\" &gt;}}"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Sobre",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Eu sou Endrio Webers, Engenheiro Agrônomo, Fitopatologista e atualmente pesquisador na área de controle biológico de doenças de plantas. Este site foi criado no intuito de compartilhar experiências e o que venho aprendendo sobre a área de controle biológico e controle de doenças de plantas e programação.\nEste será um espaço onde irei disponibilizar algumas aplicações criadas por mim que poderão ajudar meus colegas de laboratório e da área de fitopatologia. Assim como, será um espaço para divulgação de informações sobre procedimentos em análises experimentais usando o software {{&lt; fa brands r-project &gt;}}.\nFique a vontade para sugerir algo ou entrar em contato para parcerias, vou ficar animado em receber seu e-mail em: endriowebers@gmail.com"
+  },
+  {
+    "objectID": "formacao.html",
+    "href": "formacao.html",
+    "title": "Formação:",
+    "section": "",
+    "text": "Formação:\n\nDoutorando em Fitopatologia\nUniversidade Federal de Viçosa | em andamento\n\n\nMestre em Fitopatologia\nUniversidade Federal de Viçosa | 2023\nDissertação: Atividade antifúngica e controle da antracnose da soja por produtos concentrados com lipopeptídeos de Bacillus spp.\n\n\nEngenheiro Agrônomo\nUniversidade Estadual do Rio Grande do Sul | 2021\nTCC: Efeito da inoculação e coinoculação de bactérias diazotróficas Sobre o desenvolvimento e produção de milho.\n\n\nTecnico em Agropecuária\nUniversidade Federal de Santa Maria, campus Frederico Westphalen | 2015"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projetos:",
+    "section": "",
+    "text": "Clonostachys e Grão-de-bico, amigos ou inimigos?\nClonostachys é um gênero de fungos conhecido pelo micoparasitismo, sendo utilizado como agente biológico de controle de doenças de planta. Recentemente, fungos das espécies C. rhizophaga e C. chloroleuca foram relatados como agentes etiológicos do amarelecimento, podridão de colo e raiz na cultura do grão-de-bico (Plant Disease. 93, 666, 2009; New Dis. Rep. 46, 12123, 2022). No Brasil, nenhuma espécie de Clonostachys foi registrada como agente causal de doença em grão-de-bico e nenhuma outra espécie vegetal. Dessa forma, este projeto tem por objetivo elucidar o “status” da interação de Clonostachys a grão-de-bico.\n\n\n\n\n\n\n\nAtividade antifúngica e controle da antracnose da soja por produtos concentrados com lipopeptídeos de Bacillus spp.\nO controle de doenças por Bacillus spp., em grande parte, é explicado pela produção de metabólitos bioativos, principalmente os lipopeptídeos (LPPs). Os LPPs são sintetizados como metabólitos secundários pela bactéria, e são divididos em três grupos principais, surfactinas, fengicinas e iturinas de acordo com a estrutura dos peptídeos cíclicos. São moléculas anfifílicas com atividade surfactante e capazes de interagir com a estrutura das membranas celulares, formando poros que resultam no extravasamento e morte celular, este processo é tido como o principal mecanismo envolvido no controle de doenças de plantas por Bacillus spp.. Desta forma, produtos a base de Bacillus spp. se tornam um alternativa interessante para o manejo da antracnose nas lavouras de soja como um biofungicida multissítio, desde que isolados capazes de produzir LPPs sejam selecionados e posteriormente concentrados para gerar um produto rico nessas substâncias bioativas com alta eficiência no controle de doenças. Assim, esse projeto busca avaliar diferentes espécies e isolados de Bacillus spp. no controle da antracnose da soja."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Endrio Webers",
+    "section": "",
+    "text": "Engenheiro Agrônomo | Fitopatologista | Pesquisador | Controle Biológico | Analise de dados | Planejamento e condução de experimentos | Soja | Grão-de-bico"
   }
 ]
