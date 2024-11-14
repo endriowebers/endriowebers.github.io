@@ -1,11 +1,39 @@
 ---
-title: "endriowebers.github.io"
+title: "Endrio Webers" # if using a built-in template, this title appears under your photo
+subtitle: "endriowebers@gmail.com"
+image: media/profile.jpg # great spot for your professional headshot :) 
+toc: false # remove "On this page" table of contents
+about: 
+  template: jolla # see other templates at https://quarto.org/docs/websites/website-about.html#templates
+  image-shape: round
+  image-width: 18em
+
+  links:
+    - icon: linkedin # you'll need to the fontawesome extension to include icons: https://github.com/quarto-ext/fontawesome
+      text: LinkedIn
+      href: https://www.linkedin.com/in/endriowebers/
+    - icon: github
+      text: GitHub
+      href: https://github.com/endriowebers
+    - icon: envelope
+      text: e-mail
+      href: mailto::endriowebers@gmail.com
+    - icon: google
+      text: Scholar 
+      href: https://scholar.google.com.br/citations?user=7R4pqeEAAAAJ&hl=pt-BR&oi=ao 
+    - icon: file-text
+      text: Lattes
+      href: http://lattes.cnpq.br/9258482506177833
+    - icon: CV 
+      text: CV
+      href: CV.qmd
+      
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
-```
+Engenheiro Agrônomo | Fitopatologista | Pesquisador | Controle Biológico |
+Analise de dados | Planejamento e condução de experimentos | Soja | Grão-de-bico
+
+
+

@@ -1,0 +1,207 @@
+---
+format:
+  html:
+    grid: 
+      body-width: 1400px
+    resources: 
+      - shinylive-sw.js
+filters:
+  - shinylive
+---
+
+## Organizador dos Dados do Leitor de Placas {.center}
+#### Loccus LMR-96 {.center}
+
+1 - Selecione o arquivo que deseja
+
+2 - Selecione o formato e as linhas e/ou colunas a serem exibidas
+
+3 - altere o número de linhas da tabela a ser exibido em "show"
+
+4 - Selecione a tabela e a copie (Crtl+C)
+
+5 - Cole (Ctrl+V) no seu editor de tabelas de preferência
+
+
+
+
+OBS: A função de exportação de arquivos não está funcionando devido ao pacote para contrução dessa modalidade de aplicativo estar em desenvolvimento.
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 1000
+
+
+library(shiny)
+library(DT)
+library(readr)
+library(openxlsx)
+library(dplyr)
+library(reshape2)
+library(shinyjs)
+library(shinyWidgets)
+
+# Defina a interface do usuário (UI)
+ui <- fluidPage(
+  titlePanel("Extrair e Exibir Dados do Leitor de Placas"),
+  useShinyjs(),
+  sidebarLayout(
+    sidebarPanel(
+      # Adicione um botão de upload de arquivo CSV
+      fileInput("csvFile", "Selecione um arquivo CSV (.csv)", accept = ".csv"),
+      # Botão para fechar o arquivo
+      actionButton("closeButton", "Fechar Arquivo", class = "btn-danger"),
+      # Botões interruptores para colunas
+      checkboxGroupButtons(
+        inputId = "visibleColumns",
+        label = "Selecionar Colunas Visíveis",
+        choices = c("Coluna1", "Coluna2", "Coluna3", "Coluna4", "Coluna5", "Coluna6", "Coluna7", "Coluna8", "Coluna9", "Coluna10", "Coluna11", "Coluna12"),
+        selected = c("Coluna1", "Coluna2", "Coluna3", "Coluna4", "Coluna5", "Coluna6", "Coluna7", "Coluna8", "Coluna9", "Coluna10", "Coluna11", "Coluna12"),
+        direction = "vertical"
+      ),
+      # Botões interruptores para linhas
+      checkboxGroupButtons(
+        inputId = "visibleRows",
+        label = "Selecionar Linhas Visíveis",
+        choices = LETTERS[1:8],
+        selected = LETTERS[1:8],
+        direction = "vertical"
+      ),
+      # Botão colorido para exportar dados
+      downloadButton("exportHorizontal", "Exportar Tabela Horizontal", class = "btn-success"),
+      downloadButton("exportVertical", "Exportar Tabela Vertical", class = "btn-warning")
+    ),
+    mainPanel(
+      # Abas para exibir os dados na horizontal e vertical
+      tabsetPanel(
+        tabPanel("Horizontal", DTOutput("table_horizontal")),
+        tabPanel("Vertical", DTOutput("table_vertical")),
+        id = "tabs"
+      ),
+      # Rodapé com informações de desenvolvedor
+      tags$footer(
+        tags$p("Desenvolvido por Endrio Webers"),
+        tags$p("Email: endriowebers@gmail.com")
+      )
+    )
+  )
+)
+
+# Função para substituir "EP" por NA em formato numérico
+replace_EP_with_NA <- function(x) {
+  x <- as.numeric(x)
+  x[x == "EP"] <- NA
+  return(x)
+}
+
+# Defina a lógica do servidor (Server)
+server <- function(input, output) {
+  data <- reactiveVal(NULL)
+  
+  observeEvent(input$csvFile, {
+    inFile <- input$csvFile
+    if (is.null(inFile)) return(NULL)
+    
+    # Leia o conteúdo completo do arquivo CSV
+    file_content <- read_file(inFile$datapath)
+    
+    # Divida o conteúdo em linhas
+    lines <- strsplit(file_content, "\n")[[1]]
+    
+    # Encontre o início dos dados desejados (linhas que começam com "A, B, C, ...")
+    data_start <- 46
+    
+    # Pegue apenas as linhas desejadas
+    data_lines <- lines[data_start:(data_start + 7)]
+    
+    # Crie um data frame com as linhas desejadas
+    df <- read.csv(text = data_lines, header = FALSE, dec = ",", sep = ",")
+    
+    # Substitua "EP" por NA em formato numérico em todo o data frame
+    df <- df %>% mutate_all(~replace_EP_with_NA(.))
+    
+    # Substitua os pontos (.) por vírgulas (,) em todos os dados
+    df <- df %>% mutate_all(~gsub("\\.", ",", .)) 
+    
+    # Adicione os cabeçalhos ao data frame
+    colnames(df) <- c("Linha", "Coluna1", "Coluna2", "Coluna3", "Coluna4", "Coluna5", "Coluna6", "Coluna7", "Coluna8", "Coluna9", "Coluna10", "Coluna11", "Coluna12")
+    
+    # Transforme os valores na coluna "Linha" em letras de A até H mantendo a sequência
+    df$Linha <- LETTERS[1:8]
+    
+    data(df)
+  })
+  
+  # Renderize a tabela organizada com os dados na horizontal
+  output$table_horizontal <- renderDT({
+    if (!is.null(data())) {
+      df <- data()
+      selected_columns <- input$visibleColumns
+      selected_rows <- input$visibleRows
+      df <- df %>% filter(Linha %in% selected_rows)
+      df <- df[, c("Linha", selected_columns)]
+      datatable(df, options = list(pageLength = 10, scrollX = TRUE))
+    }
+  })
+  
+  # Renderize a tabela organizada com os dados na vertical (derretidos)
+  output$table_vertical <- renderDT({
+    if (!is.null(data())) {
+      df <- data()
+      selected_columns <- input$visibleColumns
+      selected_rows <- input$visibleRows
+      df <- df %>% filter(Linha %in% selected_rows)
+      df_melted <- df %>%
+        select(Linha, selected_columns) %>%
+        melt(id.vars = "Linha", variable.name = "Coluna", value.name = "Absorbância")
+      datatable(df_melted, options = list(pageLength = 10, scrollX = TRUE))
+    }
+  })
+  
+  observeEvent(input$closeButton, {
+    data(NULL)
+  })
+  
+  # Botão para exportar dados da tabela horizontal
+  output$exportHorizontal <- downloadHandler(
+    filename = function() {
+      paste("dados_exportados_horizontal.xlsx")
+    },
+    content = function(file) {
+      if (!is.null(data())) {
+        df <- data()
+        selected_columns <- input$visibleColumns
+        selected_rows <- input$visibleRows
+        df <- df %>% filter(Linha %in% selected_rows)
+        df <- df[, c("Linha", selected_columns)]
+        write.xlsx(df, file)
+      }
+    }
+  )
+  
+  # Botão para exportar dados da tabela vertical
+  output$exportVertical <- downloadHandler(
+    filename = function() {
+      paste("dados_exportados_vertical.xlsx")
+    },
+    content = function(file) {
+      if (!is.null(data())) {
+        df <- data()
+        selected_columns <- input$visibleColumns
+        selected_rows <- input$visibleRows
+        df <- df %>% filter(Linha %in% selected_rows)
+        df_melted <- df %>%
+          select(Linha, selected_columns) %>%
+          melt(id.vars = "Linha", variable.name = "Coluna", value.name = "Absorbância")
+        write.xlsx(df_melted, file)
+      }
+    }
+  )
+}
+
+# Crie o aplicativo Shiny
+shinyApp(ui = ui, server = server)
+
+
+
+```

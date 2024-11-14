@@ -1,0 +1,132 @@
+---
+format:
+  html:
+    grid: 
+      body-width: 1400px
+    resources: 
+      - shinylive-sw.js
+filters:
+  - shinylive
+---
+
+#  Determinação e Calibração da Concentração de Inóculo Fungico {.center}
+
+###  Via suspenção de esporos utilizando Hemacitômetro {.center}
+
+
+O hemacitômetro comum consiste de uma lâmina retangular em forma de H, onde se encontram duas regiões delimitadas, (figura I) cada região delimitada possui uma superfície de 9 mm² e profundidade de 0,1 mm. Esse compartimento possui 9 divisões/quadrantes, (figura II) que são de três tipos, são eles "A" = "B" = "C", em que:
+
+ - "A" – localizados nos quatro cantos e subdivididos em 15 quadrados "a"
+ - "B" – localizados entre os compartimentos "A" e subdivididos em 20 quadrados "b"
+ - "C" – localizado no centro e subdivididos em 25 quadrados "c"
+
+
+
+![I: Esquema de um hemacitômetro tipo Neubauer: lâmina retangular em forma de "H", II compartimentos (A, B, C) e subcompartimentos (a-c) da lâmina (fonte: Alfenas & Mafia, 2016)](media/app/calibra_inoculo/hemacitometro.png){fig-align="center" width=500px}
+
+ 
+
+Para utilização da aplicação, preencha os campos conforme o indicado e escolha o quadrante que foi realizada a contagem de esporos. Insira o volume final de suspensão de esporos e a" concentração desejada. A aplicação lhe retornara três valores:
+
+- Esporos por mL da suspenção inicial
+
+- Volume da suspensão inicial para preparo da suspensão de inóculo final em mL"
+
+- Volume de veículo para preparo da suspensão de inóculo final em mL"
+
+
+
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 500
+webr::install("dplyr")
+
+library(shiny)
+library(dplyr)
+
+# Função inoculo modificada
+inoculo <- function(numero, quadrante, conc, volume) {
+  if (!is.numeric(numero) || !is.numeric(conc) || !is.numeric(volume)) {
+    stop("Os argumentos numero, conc e volume devem ser numéricos.")
+  }
+  fator_correcao <- case_when(
+    quadrante == "A" ~ 10000,
+    quadrante == "a" ~ 160000,
+    quadrante == "b" ~ 200000,
+    quadrante == "c" ~ 250000,
+    quadrante == "c'" ~ 4000000,
+    TRUE ~ 1  # Caso nenhum dos casos acima seja verdadeiro
+  )
+  
+  esporo_mL <- numero * fator_correcao
+  
+  volume_inoculo <- (conc * volume) / esporo_mL
+  volume_veiculo <- volume - volume_inoculo
+  
+  return(list(esporo_mL = esporo_mL, volume_inoculo = volume_inoculo, volume_veiculo = volume_veiculo))
+}
+
+# Define UI for application
+ui <- navbarPage(theme = bslib::bs_theme(bootswatch = "lumen"),
+                tabPanel("Calibração de Inóculo",
+                         fluidRow(
+                           column(width = 6,
+                                  numericInput("numero", "Número MÉDIO de esporos contados:", 0, min = 1, max = 999999999999),
+                                  radioButtons("quadrante", "Quadrante:",
+                                              c("A" = "A",
+                                                "a" = "a",
+                                                "b" = "b",
+                                                "c" = "c",
+                                                "c'" = "c'")),
+                                  numericInput("volume", "Volume final desejado (mL):", 0, min = 0, max = 999999999999999999)),
+                           column(width = 6,
+                                  radioButtons("conc", "Concentração desejada:",
+                                              c("10²" = 100,
+                                                "10³" = 1000,
+                                                "10⁴" = 10000,
+                                                "10⁵" = 100000,
+                                                "10⁶" = 1000000,
+                                                "10⁷" = 10000000,
+                                                "10⁸" = 100000000,
+                                                "10⁹ "= 1000000000,
+                                                "10¹⁰"= 10000000000)),
+                                  verbatimTextOutput("resultado")
+                           )
+                         ),
+                         style = "text-align: center;"
+                )
+)
+
+# Define server logic (**sem alterações**)
+server <- function(input, output, session) {
+  output$resultado <- renderText({
+    resultado <- inoculo(input$numero, input$quadrante, as.numeric(input$conc), input$volume)
+    paste("Esporos por mL:", format(resultado$esporo_mL, scientific = TRUE), "\n",
+          "Volume para Inóculo:", resultado$volume_inoculo, "\n",
+          "Volume de Veículo:", resultado$volume_veiculo)
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
+
+
+Referência: Alfenas A., Mafia R. __Métodos em Fitopatologia.__ 2ª edição. Editora UFV. 2016.
+
+
