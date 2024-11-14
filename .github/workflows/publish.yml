@@ -34,8 +34,8 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
-            shinylive@0.3.0
-            knitr@1.48
+            cran::shinylive@0.3.0
+            any::knitr@1.48
             any::rmarkdown
             any::downlit
             any::xml2
