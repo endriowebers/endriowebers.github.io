@@ -11,7 +11,7 @@ about:
   links:
     - icon: CV 
       text: Referências CABIF
-      href: referencia.qmd 
+      href: referencias.qmd 
     - icon: linkedin # you'll need to the fontawesome extension to include icons: https://github.com/quarto-ext/fontawesome
       text: LinkedIn
       href: https://www.linkedin.com/in/endriowebers/
