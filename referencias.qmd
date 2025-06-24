@@ -2,7 +2,7 @@
 title: "Controle Biológico de Doenças: da Pesquisa ao Campo -  Endrio Webers"
 ---
 
-![](media/CABIF.jpg){width=60%}
+![](media/cabif.jpg){width=60%}
 
 {{< pdf file="pdf/Controle_Biologico_da_pequisa_ao_campo_referencias_links.pdf"  height="500px">}}
 ---
