@@ -3,7 +3,7 @@ title: "Habilidades"
 ---
 
 
-#### Teste de eficiência de fungicidas "in vitro" {.center}
+#### Teste de eficácia de fungicidas "in vitro" {.center}
 
 ::: {layout="[[52,48.5],[50,50]]"}
 ![](media/habilidades/in_vitro.jpg){width=50%} 
@@ -11,21 +11,21 @@ title: "Habilidades"
 ![](media/habilidades/in_vitro_2.jpg){width=50%} 
 
 ![](media/habilidades/in_vitro_3.jpg){width=50%} 
-
-
 ![](media/habilidades/in_vitro_4.jpg){width=50%} 
+
+![](media/habilidades/in_vitro_5.jpg){width=50%} 
 
 
 :::
 
 
-#### Teste de eficiência de fungicidas em Casa de vegetação {.center}
+#### Teste de eficácia de de controle de fungicidas em Casa de vegetação {.center}
 
 
 ::: {layout-ncol=2}
 
 ![](media/habilidades/veg_1.jpg){width=100%} 
-
+![](media/habilidades/mancha alvo.jpg){width=100%} 
 
 ![](media/habilidades/veg_2.webp){width=75%} 
 :::
@@ -55,7 +55,7 @@ title: "Habilidades"
 
 ::: {layout-ncol=2}
 
-![](media/habilidades/molecular_1.jpeg){width=100%} 
+![](media/habilidades/molecular_1.jpg){width=100%} 
 
 ![](media/habilidades/molecular_2.jpeg){width=80%} 
 
@@ -85,5 +85,5 @@ title: "Habilidades"
 ![](media/habilidades/analise_2.jpg){width=60%}
 
 ![](media/habilidades/aplicacao.jpg){width=200%} 
-
+![](media/habilidades/aplicacao_2.jpg){width=200%} 
 :::

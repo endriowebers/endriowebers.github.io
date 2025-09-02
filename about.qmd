@@ -3,12 +3,10 @@ title: Sobre
 ---
 
 
-Eu sou Endrio Webers, Engenheiro Agrônomo, Fitopatologista e atualmente pesquisador na área de controle biológico de doenças de plantas. Este site foi criado no intuito de compartilhar experiências e o que venho aprendendo sobre a área de controle biológico e controle de doenças de plantas e programação.
+Eu sou Endrio Webers, Engenheiro Agrônomo e Fitopatologista. Atualmente, sou doutorando, pesquisador com ênfase no desenvolvimento e na avaliação da performance de produtos de origem biológica e sintética, contribuindo para o manejo e controle de doenças de plantas. 
 
+Este site foi criado com o intuito de compartilhar o que venho aprendendo sobre essas diferentes frentes do controle de doenças e, principalmente, sobre como a programação pode otimizar e aprofundar nossas análises.
 
+Aqui, você encontrará um espaço onde disponibilizo aplicações criadas por mim em R e Python para auxiliar colegas de laboratório e da área de fitopatologia. O objetivo é compartilhar ferramentas e informações sobre procedimentos em análises experimentais, transformando dados em conhecimento prático.
 
-Este será um espaço onde irei disponibilizar algumas aplicações criadas por mim que poderão ajudar meus colegas de laboratório e da área de fitopatologia. Assim como, será um espaço para divulgação de informações sobre procedimentos em análises experimentais usando o software {{< fa brands r-project >}}.
-
-
-
-Fique a vontade para sugerir algo ou entrar em contato para parcerias, vou ficar animado em receber seu e-mail em: endriowebers@gmail.com
+Fique à vontade para sugerir algo ou entrar em contato para parcerias, vou ficar animado em receber seu e-mail em: endriowebers@gmail.com."
