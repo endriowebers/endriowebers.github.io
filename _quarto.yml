@@ -18,8 +18,10 @@ website:
         text: Habilidades
       - text: Aplicações  # Main menu title
         menu:
-        - text: Calibração de Inóculo    # Submenu item 1 - text
-          href: https://endriowebers.github.io/calibrainoculo/  # Submenu item 1 - link
+        # - text: Calibração de Inóculo    # Submenu item 1 - text
+        #   href: https://endriowebers.github.io/calibrainoculo/  # Submenu item 1 - link
+          - text: Calibração de Inóculo    # Submenu item 1 - text
+          href: https://endriowebers.shinyapps.io/shiny_app/  # Submenu item 1 - link
         - text: Organizador DLP    # Submenu item 2 within pag1 - text
           href: https://endriowebers.github.io/DLPapp/  # Submenu item 2 within pag1 - link
       - icon: github # add icons that link to social media, etc.
